@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+        <script type="text/javascript">
+            (function() {
+                'use strict';
+                angular.module('angularPosting', [])
+                .controller('ctrl', ctrl);
+                ctrl.$inject = ['$http'];
+                function ctrl($http){
+                    $http({
+                        url: 'https://fullstack-web-udemy-jporfirio.c9users.io/',
+                        method: 'POST'
+                    })
+                    .then(function(response){
+                        console.log('posted');
+                    });
+                }
+            }());
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html>

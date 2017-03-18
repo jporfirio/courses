@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>HTTP Request using Ajax</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js" ></script>
+    <script src="app.js" charset="utf-8"></script>
+  </head>
+  <body ng-app='MenuCategoriesApp'>
+    <h1>Using $http Service</h1>
+    <div ng-controller='MenuCategoriesController as menu'>
+      <h3>List of menu categories</h3>
+      <ol>
+        <li ng-repeat='category in menu.categories'>
+          <a href='' ng-click='menu.logMenuItems(category.short_name)'>({{category.short_name}}) - {{category.name}}</a>
+        </li>
+      </ol>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js" ></script>
+    <script src="app.js" charset="utf-8"></script>
+    <title></title>
+  </head>
+  <body ng-app='customServiceApp'>
+    <div ng-controller='parentController as parent'>
+      <label>
+        Your height: <input type='number' ng-model='parent.height'/>m.
+      </label>
+      <label>
+        Your weight: <input type='number' ng-model='parent.weight'/>Kg.
+      </label>
+      <button ng-click='parent.compute();'>Calculate BMI</button><br />
+      <label>
+        Your BMI is: {{ parent.bmi }}.
+      </label>
+    </div>
+  </body>
+</html>

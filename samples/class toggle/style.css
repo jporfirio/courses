@@ -1,0 +1,11 @@
+.black {
+  background-color: black;
+  text-align: right;
+  color: yellow;
+}
+
+.yellow {
+  background-color: yellow;
+  text-align: left;
+  color: black;
+}

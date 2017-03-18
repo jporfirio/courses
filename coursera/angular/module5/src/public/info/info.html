@@ -1,0 +1,36 @@
+<div ng-if='vm.userExists'>
+    <table>
+        <tr>
+            <th>New User Information</th>
+        </tr>
+        <tr>
+            <td>User First Name:</td>
+            <td>{{vm.user.firstName}}</td>
+        </tr>
+        <tr>
+            <td>User Last Name:</td>
+            <td>{{vm.user.lastName}}</td>
+        </tr>
+        <tr>
+            <td>User E-mail</td>
+            <td>{{vm.user.email}}</td>
+        </tr>
+        <tr>
+            <td>User Phone Number</td>
+            <td>{{vm.user.phone}}</td>
+        </tr>
+        <tr>
+            <td>User Favorite Dish</td>
+            <td>{{vm.user.favoriteDish}}</td>
+        </tr>
+    </table>
+
+        <img src="{{vm.imageLink}}">
+        <p>
+            {{vm.description}}
+        </p>
+</div>
+
+<div ng-if='!vm.userExists'>
+    Not Signed Up Yet. <a href='#signup'>Sign up Now!</a>
+</div>

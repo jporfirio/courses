@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>ScoreKeeper</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <style media="screen">
+      .winner {
+        color: green;
+      }
+      h1:hover {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <th>
+
+      </th>
+      <td>
+
+      </td>
+      <td>
+        
+      </td>
+    </table>
+    <div class="score">
+      <h1>
+        <span id="leftPlayerScore">0</span>
+         to
+        <span id="rightPlayerScore">0</span>
+      </h1>
+      <h2>Playing to <span id="scoreLimit">5</span></h2>
+      <label>
+        Score limit: <input id="scoreLimitBox" class="form-control" type="number" name="scoreLimit" placeholder="5" />
+      </label>
+      <button id="leftPlayerBtn" class="btn btn-default">Player One</button>
+      <button id="rightPlayerBtn" class="btn btn-default">Player Two</button>
+      <button id="resetBtn" class="btn btn-default">Reset</button>
+    </div>
+    <script src="scriptScoreKeeper.js" charset="utf-8"></script>
+  </body>
+</html>

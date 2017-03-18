@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>ng-'If, Show and Hide'</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js" ></script>
+    <script src="app.js" charset="utf-8"></script>
+  </head>
+  <body ng-app='conditionalDisplayApp'>
+    <div ng-controller='displayController as dc'>
+      <div ng-show='dc.alwaysShow'>
+        This text is shown
+      </div>
+      <div ng-hide='dc.alwaysHide'>
+        This text is hidden
+      </div>
+      <div ng-show='!dc.alwaysShow'>
+        This is hidden too
+      </div>
+      <button ng-click='dc.toggle();'>Hide text</button>
+      <div ng-if='dc.display' >
+        This text is removed from the DOM if you press the button.<br />
+        And then reinserted if you press again.
+      </div>
+    </div>
+  </body>
+</html>

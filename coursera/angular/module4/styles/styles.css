@@ -1,0 +1,27 @@
+body {
+    color: lightgray;
+    background-color: black;
+}
+
+.navlist {
+    float: right;
+}
+
+button {
+    color: white;
+    background-color: black;
+}
+
+button:hover {
+    background-color: gray;
+    color: black;
+}
+
+tbody>tr:hover {
+    background-color: gray;
+    color: white;
+}
+
+.btn:focus, .btn:active:focus, .btn.active:focus {
+    outline: 0 none;
+}

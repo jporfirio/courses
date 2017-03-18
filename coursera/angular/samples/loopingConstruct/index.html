@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Looping Construct</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js" ></script>
+    <script src="script.js" charset="utf-8"></script>
+  </head>
+  <body ng-app='shoppingApp'>
+    <h1>ng-repeat</h1>
+    <div ng-controller='shoppingList'>
+      <h3>Shopping list 'simple':</h3>
+      <ul>
+        <li ng-repeat='item in shoppingList1'>{{item}}</li>
+      </ul>
+      <h3>Shopping list 'objects':</h3>
+      <label>
+        Search term will be used to cut items whose inner strings don't match the expression<br />
+        <input type='text' ng-model='search' placeholder="Search expression" />
+      </label>
+      <ul>
+        <li ng-repeat='item in shoppingList2 | filter : search'>
+          {{ $index + 1 }} - {{ item.quantity }} of {{ item.name }}
+        </li>
+      </ul>
+      <input type='text' ng-model='itemName' placeholder='item name' />
+      <input type='number' ng-model='itemQuantity' placeholder="0" />
+      <button ng-click='addToList();'>Add to list</button>
+    </div>
+  </body>
+</html>

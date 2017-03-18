@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Prototypal inheritance</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js" ></script>
+    <script src="script.js" charset="utf-8"></script>
+  </head>
+  <body ng-app='protInheritanceApp'>
+    <h1>Prototypal inheritance for Angular controllers</h1>
+    <div ng-controller='parentController1 as parent'>
+    <!-- tells angular to bind the controller to the scope
+    instead of doing it manually, know as 'controller as' syntax -->
+      <div ng-controller='childController1 as child'>
+        {{ parent.value }}
+      </div>
+    </div>
+  </body>
+</html>

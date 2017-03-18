@@ -1,0 +1,15 @@
+<h2>{{ ctrl.title }}</h2><hr />
+
+<table class="table">
+    <thead>
+        <th>#</th>
+        <th>Category name</th>
+    </thead>
+    <tbody>
+        <tr ng-repeat='category in ctrl.categories'
+            ui-sref="items({categoryShortName: category.short_name})">
+            <td>{{ category.short_name }}</td>
+            <td>{{ category.name }}</td>
+        </tr>
+    </tbody>
+</table>

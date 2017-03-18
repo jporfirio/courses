@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Custom directive</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js" ></script>
+    <script src="app.js" charset="utf-8"></script>
+  </head>
+  <body ng-app='directiveApp'>
+    <div ng-controller='directiveController as controller'>
+      <list-item some-list='controller'></list-item>
+    </div>
+    <controlled-directive></controlled-directive>
+  </body>
+</html>

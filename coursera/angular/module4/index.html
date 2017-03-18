@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Module 4 solution</title>
+        <link rel="stylesheet" href="styles.css" media="screen" title="no title">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="styles/bootstrap.min.css">
+        <link rel="stylesheet" href="styles/styles.css">
+    </head>
+    <body ng-app='MenuApp'>
+        <div class='container'>
+            <div class="navlist">
+                <button ui-sref="home" class="btn">Home</button>
+                <button ui-sref="categories" class="btn">Categories</button>
+            </div>
+            <ui-view></ui-view>
+        </div>
+        <!-- libraries -->
+        <script src="lib/angular.min.js"></script>
+        <script src="lib/angular-ui-router.min.js" charset="utf-8"></script>
+
+        <!-- modules -->
+        <script src="src/menuapp.module.js" charset="utf-8"></script>
+        <script src="src/data.module.js" charset="utf-8"></script>
+
+        <!-- controllers -->
+        <script src="src/categories.controller.js" charset="utf-8"></script>
+        <script src="src/items.controller.js" charset="utf-8"></script>
+
+        <!-- routes -->
+        <script src="routes.js" charset="utf-8"></script>
+
+        <!-- services -->
+        <script src="src/menudata.service.js" charset="utf-8"></script>
+
+        <!-- components -->
+        <script src="src/categories.component.js" charset="utf-8"></script>
+        <script src="src/items.component.js" charset="utf-8"></script>
+
+    </body>
+</html>

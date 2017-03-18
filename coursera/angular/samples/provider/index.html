@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Factory produced service</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js" ></script>
+    <script src="app.js" charset="utf-8"></script>
+  </head>
+  <body ng-app='customServiceApp'>
+    <div ng-controller='parentController as ctr'>
+      Parent max: {{ ctr.max }} <br />
+      Parent min: {{ ctr.min }}
+    </div>
+  </body>
+</html>
