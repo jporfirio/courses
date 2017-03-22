@@ -10,4 +10,12 @@ var leaderSchema = new mongoose.Schema({
     timestamps: true
 });
 
-module.exports = mongoose.model('leader', leaderSchema);
+module.exports.model = mongoose.model('leader', leaderSchema);
+
+module.exports.sample = {
+    name: 'Martollo',
+    image: 'n/a',
+    designation: 'Technical Overmaster of Oven',
+    abbreviation: 'TOO',
+    description: 'Ruler of the Oven, commands of the armies of cheese'
+}

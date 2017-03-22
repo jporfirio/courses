@@ -17,4 +17,25 @@ var dishSchema = new mongoose.Schema({
     timestamps: true
 });
 
-module.exports = mongoose.model('dish', dishSchema);
+module.exports.model = mongoose.model('dish', dishSchema);
+
+module.exports.sample = {
+    name: 'pizza di martollo',
+    image: 'n/a',
+    category: 'pizza',
+    label: 'PdM',
+    price: 12.50,
+    description: 'Martollo\'s Pizza, made with love and some special ingrediant not approved by the authorities',
+    comments: [
+        {
+            rating: 5,
+            comment: 'Never tasted something as good as this, and the aftertaste is orgasmic',
+            author: 'Sidney Myers'
+        },
+        {
+            rating: 1,
+            comment: 'BLAM THIS PIECE OF CRAP!',
+            author: 'Boaty McBoatface'
+        }
+    ]
+};

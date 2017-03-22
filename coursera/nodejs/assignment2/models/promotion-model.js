@@ -13,4 +13,12 @@ var promotionSchema = new mongoose.Schema({
     timestamps: true
 });
 
-module.exports = mongoose.model('promotion', promotionSchema);
+module.exports.model = mongoose.model('promotion', promotionSchema);
+
+module.exports.sample = {
+    name: 'Sales Extraordinaire',
+    image: 'n/a',
+    label: 'Things you can\' live without',
+    price: 99.89,
+    description: 'Some things are worth dying for. Are you? Wait, WHAT? What kind of question is that?'
+}
