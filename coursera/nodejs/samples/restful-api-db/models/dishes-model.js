@@ -1,5 +1,4 @@
-var mongoose = require('mongoose'),
-    commentSchema = require('./comment-model');
+var mongoose = require('mongoose');
 
 // mongoose-currency
 require('mongoose-currency').loadType(mongoose);
@@ -12,7 +11,13 @@ var dishSchema = new mongoose.Schema({
     label: { type: String, required: true, unique: true, default: '' },
     price: { type: currency, required: true },
     description: { type: String, required: true },
-    comments: [commentSchema]
+    comments: [
+        {
+            rating:  { type: Number, min: 1, max: 5, required: true },
+            comment:  { type: String, required: true },
+            author:  { type: String, required: true }
+        }
+    ]
 }, {
     timestamps: true
 });

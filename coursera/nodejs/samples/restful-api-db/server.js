@@ -5,11 +5,13 @@ var mongoose = require('mongoose');
 mongoose.connect(process.env.MLAB_DB_ADDRESS);
 
 var routerFactory = require('./router-factory');
-var dishRouter = routerFactory('./models/dishes-model', 'dishId');
+var dishRouter = routerFactory('./models/dishes-model', [
+    'comments'
+]);
 app.use('/dish', dishRouter);
-var leaderRouter = routerFactory('./models/leader-model', 'leaderId');
+var leaderRouter = routerFactory('./models/leader-model');
 app.use('/leader', leaderRouter);
-var promotionRouter = routerFactory('./models/promotion-model', 'promotionId');
+var promotionRouter = routerFactory('./models/promotion-model');
 app.use('/promotion', promotionRouter);
 
 mongoose.connection.on('error', console.error.bind(console, 'connection error'));
