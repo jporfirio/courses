@@ -93,7 +93,7 @@ module.exports = function(modelPackageLocation, collections){
                 })
             })
             .put(function(req, res, next){
-                model.findById(req.params.innerId, function(err, obj){
+                model.findById(req.params.id, function(err, obj){
                     if(err) throw err;
                     // TODO not really updating, just removing and insertin new one
                     obj[c].id(req.params.innerId).remove();
@@ -103,6 +103,16 @@ module.exports = function(modelPackageLocation, collections){
                         if(err) throw err;
                         console.log('Updated ' + c);
                         res.json(obj);
+                    });
+                });
+            })
+            .delete(function(req, res, next){
+                model.findById(req.params.id, function(err, obj){
+                    console.log(obj[c]);
+                    obj[c].id(req.params.innerId).remove();
+                    obj.save(function(err, resp){
+                        if(err) throw err;
+                        res.json(resp);
                     });
                 });
             });
