@@ -9,7 +9,8 @@
   function directiveController(){
     this.items = [
       { name: 'beer', quantity: 'lots' },
-      { name: 'wine', quantity: 'not as much'}
+      { name: 'wine', quantity: 'not as much'},
+      { name: 'rootbeer', quantity: 'none'}
     ];
     this.logName = function(name){
       console.log(name);
@@ -18,9 +19,9 @@
 
   function ControllerFunction(){
     var control = this;
-    control.name = 'Fuckery';
+    control.name = 'Before function execution';
     control.rename = function(){
-      control.name = 'Tom Fuckery';
+      control.name = 'After function execution';
     };
   }
 
